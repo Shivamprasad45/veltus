@@ -5,13 +5,13 @@ const AboutUs1 = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-white">
       {/* Left Side - Image */}
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="w-full md:w-1/2 flex justify-center h-[70vh]">
         <Image
-          src="https://manuel.co.in/wp-content/uploads/2023/10/pratheen-removebg-preview.png" // Replace with your image path
+          src="https://res.cloudinary.com/dn633knvv/image/upload/v1740744420/botle_upscaled-removebg-preview_upscaled_mfrrd5.png" // Replace with your image path
           alt="Tyteen Plus"
           width={400}
-          height={400}
-          className="object-contain"
+          height={200}
+          className="object-contain "
         />
       </div>
 

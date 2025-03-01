@@ -1,28 +1,38 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
     name: "R N Joshi",
     role: "Customer",
-    quote: "Excellent quality. Exactly what I asked for",
+    quote: "Excellent quality. Exactly what I asked for!",
   },
   {
-    name: "R t Joshi",
+    name: "Amit Sharma",
     role: "Customer",
-    quote: "Excellent quality. Exactly what I asked for",
+    quote: "The service was amazing! Fast delivery and great product.",
   },
   {
-    name: "R tt Joshi",
+    name: "Neha Verma",
     role: "Customer",
-    quote: "Excellent quality. Exactly what I asked for",
+    quote: "Loved the packaging and the product. Will order again.",
   },
   {
-    name: "R Nfgg Joshi",
+    name: "Rajesh Kumar",
     role: "Customer",
-    quote: "Excellent quality. Exactly what I asked for",
+    quote: "Affordable and top-notch quality. Highly recommended!",
   },
-  // Add more testimonials here if needed
+  {
+    name: "Sanya Kapoor",
+    role: "Customer",
+    quote: "Customer support was very helpful. Great experience overall.",
+  },
+  {
+    name: "Vikram Singh",
+    role: "Customer",
+    quote: "Impressed with the quality and attention to detail.",
+  },
 ];
 
 export default function CustomerTestimonials() {
@@ -52,15 +62,15 @@ export default function CustomerTestimonials() {
             “
           </div>
         </div>
-        <div className="mt-6 flex justify-center space-x-4">
+        <div className="mt-6 flex justify-center space-x-4 relative">
           <button
-            onClick={prevTestimonial}
+            onClick={() => prevTestimonial()}
             className="p-2 border rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white"
           >
             <ChevronLeft size={20} />
           </button>
           <button
-            onClick={nextTestimonial}
+            onClick={() => nextTestimonial()}
             className="p-2 border rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white"
           >
             <ChevronRight size={20} />
@@ -77,16 +87,14 @@ export default function CustomerTestimonials() {
         </h2>
         <div className="flex justify-center mt-8 space-x-8">
           <div className="p-6 border shadow-md rounded-md w-48">
-            <img src="/tyteen-logo.png" alt="TYTEEN" className="mx-auto" />
-            <h3 className="mt-4 font-bold text-lg">TYTEEN</h3>
-          </div>
-          <div className="p-6 border shadow-md rounded-md w-48">
-            <img
-              src="/pratheen-logo.png"
-              alt="PRATHEEN"
-              className="mx-auto opacity-50"
+            <Image
+              src="https://res.cloudinary.com/dn633knvv/image/upload/v1740813545/vultus_ip6m6t.jpg"
+              alt="TYTEEN"
+              className="mx-auto"
+              height={200}
+              width={200}
             />
-            <h3 className="mt-4 font-bold text-lg">PRATHEEN</h3>
+            <h3 className="mt-4 font-bold text-lg">Vultus</h3>
           </div>
         </div>
       </div>

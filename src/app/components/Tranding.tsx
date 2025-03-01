@@ -8,13 +8,7 @@ const products = [
       "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
     alt: "TYTEEN Vanilla Protein Powder",
   },
-  {
-    id: 2,
-    name: "TYTEEN Plus Vanilla Protein Powder(400 gm)",
-    image:
-      "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
-    alt: "TYTEEN Plus Vanilla Protein Powder",
-  },
+
   {
     id: 3,
     name: "Mineral Syrup",
@@ -36,7 +30,7 @@ export default function TrendingProducts() {
         believe in the power of simple and easy communication.
       </p>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 ">
         {products.map((product) => (
           <div
             key={product.id}

@@ -18,13 +18,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="">
+      <body className={`${inter.className} relative`}>
+        {/* Background SVG */}
+        <div className="absolute inset-0 -z-10">
+          <svg
+            className="w-full h-full opacity-30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#1e293b"
+              fillOpacity="1"
+              d="M0,64L48,96C96,128,192,192,288,208C384,224,480,192,576,160C672,128,768,96,864,96C960,96,1056,128,1152,144C1248,160,1344,160,1392,160L1440,160V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z"
+            ></path>
+          </svg>
+        </div>
+
+        {/* Navbar */}
+        <div className="relative z-10">
           <Navbar />
         </div>
 
-        {children}
-        <div className="">
+        {/* Page Content */}
+        <main className="relative z-10">{children}</main>
+
+        {/* Footer */}
+        <div className="relative z-10">
           <Footer />
         </div>
       </body>

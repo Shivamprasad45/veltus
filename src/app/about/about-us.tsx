@@ -1,7 +1,30 @@
 import AboutUs1 from "./About1";
 import StatsSection from "./aboutmiddle";
-
+import { Award, ShieldCheck, BadgeCheck, PackageCheck } from "lucide-react";
+import { motion } from "framer-motion";
 export default function AboutUs() {
+  const features = [
+    {
+      title: "OEM Excellence",
+      description: "Our OEM services extend beyond manufacturing.",
+      icon: <Award className="w-10 h-10 text-green-600" />,
+    },
+    {
+      title: "100% Original",
+      description: "We guarantee you the sale of Original Brands.",
+      icon: <ShieldCheck className="w-10 h-10 text-green-600" />,
+    },
+    {
+      title: "Commitment to Quality",
+      description: "Quality is at the core of everything we do.",
+      icon: <BadgeCheck className="w-10 h-10 text-green-600" />,
+    },
+    {
+      title: "Quality Assurance",
+      description: "Quality assurance is our promise of excellence.",
+      icon: <PackageCheck className="w-10 h-10 text-green-600" />,
+    },
+  ];
   return (
     <section className="relative w-full py-16 bg-[#f5f7e8] overflow-hidden">
       {/* Background diagonal shape */}
@@ -11,187 +34,22 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left side - Feature boxes */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* OEM Excellence */}
-            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center text-center">
-              <div className="w-16 h-16 mb-4 relative">
-                <div className="absolute inset-0 rounded-full border-2 border-orange-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16 4V12M16 20V28M8 16H4M28 16H24M12 8L8 4M24 28L20 24M24 4L20 8M8 28L12 24"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-6 rounded-md shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:bg-green-50 transition-all"
+              >
+                <div className="w-16 h-16 mb-4 flex items-center justify-center border-2 border-orange-500 rounded-full relative">
+                  {feature.icon}
                 </div>
-              </div>
-              <h3 className="text-xl font-bold mb-2">OEM Excellence</h3>
-              <p className="text-gray-600">
-                Our OEM services extend beyond manufacturing.
-              </p>
-            </div>
-
-            {/* 100% Original */}
-            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center text-center">
-              <div className="w-16 h-16 mb-4 relative">
-                <div className="absolute inset-0 rounded-full border-2 border-orange-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M16 18C17.6569 18 19 16.6569 19 15C19 13.3431 17.6569 12 16 12C14.3431 12 13 13.3431 13 15C13 16.6569 14.3431 18 16 18Z"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M8 8L13 13M23 23L18 18M23 8L18 13M8 23L13 18"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold mb-2">100% Original</h3>
-              <p className="text-gray-600">
-                We guarantee you the sale of Original Brands.
-              </p>
-            </div>
-
-            {/* Commitment to Quality */}
-            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center text-center">
-              <div className="w-16 h-16 mb-4 relative">
-                <div className="absolute inset-0 rounded-full border-2 border-orange-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22 14H26C27.1046 14 28 14.8954 28 16V26C28 27.1046 27.1046 28 26 28H6C4.89543 28 4 27.1046 4 26V16C4 14.8954 4.89543 14 6 14H10"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 18L16 22L22 18"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M16 4V22"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 8L16 4L22 8"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Commitment to Quality</h3>
-              <p className="text-gray-600">
-                Quality is at the core of everything we do
-              </p>
-            </div>
-
-            {/* Quality Assurance */}
-            <div className="bg-white p-6 rounded-md shadow-sm flex flex-col items-center text-center">
-              <div className="w-16 h-16 mb-4 relative">
-                <div className="absolute inset-0 rounded-full border-2 border-orange-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M28 15V8C28 6.89543 27.1046 6 26 6H6C4.89543 6 4 6.89543 4 8V24C4 25.1046 4.89543 26 6 26H16"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M22 29L26 25L22 21"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M26 25H18"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M4 10H28"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 6V10"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M22 6V10"
-                      stroke="#16a34a"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Quality Assurance</h3>
-              <p className="text-gray-600">
-                Quality assurance is our promise of excellence
-              </p>
-            </div>
+                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
 
           {/* Right side - Text content */}

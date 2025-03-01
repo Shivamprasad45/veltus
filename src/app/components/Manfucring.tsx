@@ -3,9 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const images = [
-  "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
-  "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
-  "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
+  "https://res.cloudinary.com/dn633knvv/image/upload/v1740743449/pixelcut-export_upscaled_zl9ymz.png",
+  "https://res.cloudinary.com/dn633knvv/image/upload/v1740744420/botle_upscaled-removebg-preview_upscaled_mfrrd5.png",
 ];
 
 const ManufacturingSlider = () => {
@@ -23,9 +22,9 @@ const ManufacturingSlider = () => {
             <Image
               src={src}
               alt={`Manufacturing Image ${index + 1}`}
-              width={400}
-              height={300}
-              className="w-full h-full object-cover"
+              width={images[1] ? 100 : 400}
+              height={images[1] ? 100 : 400}
+              className="w-full h-52 object-cover"
             />
           </SwiperSlide>
         ))}

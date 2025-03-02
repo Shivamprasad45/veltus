@@ -182,21 +182,6 @@ const ProductDetails = ({ params }: { params: { id: string } }) => {
                 </ul>
               </div>
             </div>
-
-            <div className="mt-auto">
-              <div className="flex items-center justify-between">
-                <p className="text-2xl font-bold text-green-700">
-                  ${item.price.toFixed(2)}
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium shadow-md"
-                >
-                  Add to Cart
-                </motion.button>
-              </div>
-            </div>
           </motion.div>
         </div>
 

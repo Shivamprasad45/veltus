@@ -74,7 +74,7 @@ export default function Hero() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <ManufacturingFacility />
+          {/* <ManufacturingFacility /> */}
         </motion.div>
 
         <motion.div

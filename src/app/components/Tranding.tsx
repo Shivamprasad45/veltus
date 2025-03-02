@@ -1,54 +1,87 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const products = [
   {
     id: 1,
-    name: "TYTEEN Vanilla Protein Powder(400 gm)",
+    name: "TYTEEN Vanilla Protein Powder (400 gm)",
     image:
-      "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
+      "https://res.cloudinary.com/dn633knvv/image/upload/v1740743449/pixelcut-export_upscaled_zl9ymz.png",
     alt: "TYTEEN Vanilla Protein Powder",
   },
-
   {
     id: 3,
     name: "Mineral Syrup",
     image:
-      "https://manuel.co.in/wp-content/uploads/2024/01/tyteen_front-e1705487716303.png",
+      "https://res.cloudinary.com/dn633knvv/image/upload/v1740744420/botle_upscaled-removebg-preview_upscaled_mfrrd5.png",
     alt: "Mineral Syrup",
   },
 ];
 
 export default function TrendingProducts() {
   return (
-    <section className="py-12 text-center">
-      <h2 className="text-4xl font-bold text-gray-900">
-        <span className="text-blue-600">Trending </span>
-        <span className="text-orange-500">Products</span>
-      </h2>
-      <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
-        We understand the importance of approaching each work integrally and
-        believe in the power of simple and easy communication.
-      </p>
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-5xl font-bold mb-4">
+            <span className="text-blue-600">Trending </span>
+            <span className="text-orange-500">Products</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We understand the importance of approaching each work integrally and
+            believe in the power of simple and easy communication.
+          </p>
+        </motion.div>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 ">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="border border-gray-200 shadow-lg p-4 rounded-lg hover:shadow-xl transition"
-          >
-            <Image
-              src={product.image}
-              alt={product.alt}
-              width={250}
-              height={300}
-              className="mx-auto"
-            />
-            <h3 className="mt-4 text-lg font-semibold">{product.name}</h3>
-            <button className="mt-4 px-4 py-2 bg-green-500 text-white font-semibold rounded-lg flex items-center justify-center mx-auto hover:bg-green-600">
-              ➜ Buy Now
-            </button>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 justify-items-center">
+          {products.map((product) => (
+            <motion.div
+              key={product.id}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-sm border border-gray-200"
+            >
+              <div className="aspect-square bg-gray-100 rounded-t-2xl flex items-center justify-center p-8">
+                <Image
+                  src={product.image}
+                  alt={product.alt}
+                  width={300}
+                  height={300}
+                  className="object-contain w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                  priority
+                />
+              </div>
+
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {product.name}
+                </h3>
+                <button className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all duration-300 flex items-center gap-2 mx-auto">
+                  <span>Buy Now</span>
+                  <svg
+                    className="w-4 h-4 -translate-x-1 group-hover:translate-x-0 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

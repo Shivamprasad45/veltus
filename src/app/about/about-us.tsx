@@ -66,17 +66,16 @@ export default function AboutUs() {
 
             <div className="space-y-4 text-gray-700">
               <p>
-                We envision Manuel Therapeutics to emerge as an acclaimed
-                transnational pharmaceutical company delivering high quality,
-                innovative yet affordable branded generic formulations and earn
-                the trust of the medical fraternity and patients through
-                concern, care and cure.
+                We envision vultus to emerge as an acclaimed transnational
+                pharmaceutical company delivering high quality, innovative yet
+                affordable branded generic formulations and earn the trust of
+                the medical fraternity and patients through concern, care and
+                cure.
               </p>
 
               <p>
-                Manuel Therapeutics shall evolve as a socially responsive
-                corporate entity, an epitome of total integrity, trust and
-                customer satisfaction.
+                vultus shall evolve as a socially responsive corporate entity,
+                an epitome of total integrity, trust and customer satisfaction.
               </p>
 
               <p>

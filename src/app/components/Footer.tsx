@@ -75,6 +75,7 @@ const Footer = () => {
               <p>Opp RTO Office, Peth Road, Nashik</p>
               <p>Pin: 422003, India</p>
               <p>Mob: 95291 90408</p>
+              <p>Mob: 7982456265</p>
               <p>Office: 0253-4503370</p>
             </div>
           </div>

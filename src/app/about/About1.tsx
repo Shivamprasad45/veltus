@@ -26,7 +26,7 @@ const AboutUs1 = () => {
           products
         </h2>
         <p className="text-gray-600 mb-6">
-          Established in the year 2016, Manuel Therapeutics intends to develop a
+          Established in the year 2016, vultus intends to develop a
           best-in-class range of nutraceuticals to cater to adults, adolescents,
           and children from all these segments of people, with a bigger mission
           to create a healthy generation.

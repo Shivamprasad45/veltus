@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,15 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold text-[#0C3559]">
-              Vultus
+              {/* Vultus */}
+              <Image
+                alt=""
+                src={
+                  "https://res.cloudinary.com/dn633knvv/image/upload/v1740835035/logo-1-Photoroom_j81u7m.png"
+                }
+                width={70}
+                height={100}
+              />
             </Link>
 
             {/* Desktop Navigation */}

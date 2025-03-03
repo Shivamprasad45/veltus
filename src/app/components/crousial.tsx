@@ -15,11 +15,11 @@ const heroData = {
   sections: [
     {
       id: "slide-1",
-      badgeText: "Experience the Benefits of Protein with Manuel Therapeutics",
+      badgeText: "Experience the Benefits of Protein with vultus",
       headingParts: {
         part1: "The Leading ",
         highlight: "Manufacturer",
-        part2: " of Dietary Supplements",
+        part2: " of Multivitmin Supplements",
       },
       paragraphText:
         "Premium quality supplements designed to enhance your health and wellness journey.",

@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 const products = [
   {
     id: 1,
-    name: "TYTEEN Vanilla Protein Powder (400 gm)",
+    name: "Vultamin-Gold",
     image:
       "https://res.cloudinary.com/dn633knvv/image/upload/v1740743449/pixelcut-export_upscaled_zl9ymz.png",
-    alt: "TYTEEN Vanilla Protein Powder",
+    alt: "Vultamin-Gold",
   },
   {
     id: 3,
-    name: "Mineral Syrup",
+    name: "Vullax",
     image:
       "https://res.cloudinary.com/dn633knvv/image/upload/v1740744420/botle_upscaled-removebg-preview_upscaled_mfrrd5.png",
-    alt: "Mineral Syrup",
+    alt: "Vullax",
   },
 ];
 
@@ -62,22 +62,6 @@ export default function TrendingProducts() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   {product.name}
                 </h3>
-                <button className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all duration-300 flex items-center gap-2 mx-auto">
-                  <span>Buy Now</span>
-                  <svg
-                    className="w-4 h-4 -translate-x-1 group-hover:translate-x-0 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </button>
               </div>
             </motion.div>
           ))}

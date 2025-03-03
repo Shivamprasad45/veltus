@@ -8,6 +8,7 @@ import ManufacturingFacility from "./Manfucring";
 import TrendingProducts from "./Tranding";
 import WhyChooseUs from "./Choose";
 import CustomerTestimonials from "./costumer";
+import UpcomingMedicalProducts from "./Upcoming";
 
 export default function Hero() {
   return (
@@ -74,7 +75,7 @@ export default function Hero() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          {/* <ManufacturingFacility /> */}
+          <UpcomingMedicalProducts />
         </motion.div>
 
         <motion.div

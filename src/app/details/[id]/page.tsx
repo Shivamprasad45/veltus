@@ -80,7 +80,7 @@ const ProductDetails = ({ params }: { params: { id: string } }) => {
         constipation: "15-45 ml per day",
         PSE: "30-50 ml, three times daily",
       },
-      storage: "Keep between 2°C to 30°C. Do not freeze the solution.",
+      storage: "Keep between 20°C to 30°C. Do not freeze the solution.",
     },
   ];
 

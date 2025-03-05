@@ -150,7 +150,7 @@ export default function HeroCarousel() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className={`inline-flex items-center px-4 py-1.5 mb-6 text-sm font-medium text-white rounded-full ${currentSlide.accentColor}`}
+                className={`inline-flex items-center  px-4 py-1.5 mb-6 text-sm font-medium text-white rounded-full ${currentSlide.accentColor}`}
               >
                 {currentSlide.badgeText}
               </motion.span>
@@ -290,7 +290,7 @@ export default function HeroCarousel() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.5 }}
-                  className="absolute -right-4 -top-4 bg-white rounded-full px-3 py-1.5 shadow-lg text-sm font-medium text-green-700 flex items-center gap-1"
+                  className="absolute -right-4 -top-16 bg-white rounded-full px-3 py-1.5 shadow-lg text-sm font-medium text-green-700 flex items-center gap-1 "
                 >
                   <span className="w-2 h-2 rounded-full bg-green-500"></span>
                   Premium Quality

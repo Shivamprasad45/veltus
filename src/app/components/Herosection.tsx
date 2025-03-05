@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+
 import HeroCarousel from "./crousial";
 import FeaturesSection from "./Spical";
-import ManufacturingFacility from "./Manfucring";
+
 import TrendingProducts from "./Tranding";
 import WhyChooseUs from "./Choose";
 import CustomerTestimonials from "./costumer";

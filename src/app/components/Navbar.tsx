@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="bg-[#0C3559]">
       {/* Top Contact Bar */}
       <div className="hidden md:flex justify-end px-4 py-2">
-        <p className="text-white text-sm">Contact number: +41 833-801 0097</p>
+        <p className="text-white text-sm">Contact number: +91 7982456265</p>
       </div>
 
       {/* Main Navigation */}

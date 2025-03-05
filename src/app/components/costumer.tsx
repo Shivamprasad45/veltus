@@ -5,16 +5,23 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "This is a great product!",
-    name: "John Doe",
-    role: "CEO, Company",
+    quote: "This product is truly amazing! I use it every day.",
+    name: "Rahul Sharma",
   },
   {
-    quote: "I love using this every day.",
-    name: "Jane Smith",
-    role: "CTO, Another Company",
+    quote: "I absolutely love it! The quality is outstanding.",
+    name: "Priya Verma",
   },
-]; // keep your existing testimonials array
+  {
+    quote: "It has been really useful for me. Definitely recommended!",
+    name: "Amit Patel",
+  },
+  {
+    quote: "Such a great experience! I would buy it again.",
+    name: "Sneha Iyer",
+  },
+];
+// keep your existing testimonials array
 
 export default function CustomerTestimonials() {
   const [index, setIndex] = useState(0);
@@ -56,9 +63,6 @@ export default function CustomerTestimonials() {
                 <h3 className="font-bold text-lg text-black">
                   {testimonials[index].name}
                 </h3>
-                <p className="text-sm text-gray-500">
-                  {testimonials[index].role}
-                </p>
               </div>
             </motion.div>
           </AnimatePresence>

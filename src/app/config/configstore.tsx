@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { ORDER_API } from "../Services/loginServices";
+import { Bill_API } from "../Services/BillingServices";
 
 export const store = configureStore({
   reducer: {
@@ -9,6 +10,7 @@ export const store = configureStore({
     //   [Rentel_HOME_API.reducerPath]: Rentel_HOME_API.reducer,
     //   [USer_API.reducerPath]: USer_API.reducer,
     [ORDER_API.reducerPath]: ORDER_API.reducer,
+    [Bill_API.reducerPath]: Bill_API.reducer,
     // You can add other reducers here, for example:
     // auth: authReducer,
   },
@@ -17,7 +19,8 @@ export const store = configureStore({
       // Rentel_HOME_API.middleware,
       // USer_API.middleware,
 
-      ORDER_API.middleware
+      ORDER_API.middleware,
+      Bill_API.middleware
     ),
 });
 

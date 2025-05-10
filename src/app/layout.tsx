@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Providers } from "./provider";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="canonical" href="https://vultuslifesciences.com/" />{" "}
+        {/* Replace domain */}
+      </Head>
       <Providers>
         <body className={`${inter.className} relative`}>
           {/* Background SVG */}

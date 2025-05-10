@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -9,6 +10,44 @@ import TrendingProducts from "./Tranding";
 import WhyChooseUs from "./Choose";
 import CustomerTestimonials from "./costumer";
 import UpcomingMedicalProducts from "./Upcoming";
+// app/page.tsx
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vultamin Gold | Vultus Life Sciences",
+  description:
+    "Explore Vultamin Gold, Omega-3, Multivitamins, Vullax, and Lactulose Solution by Vultus Life Sciences. Your trusted health companion.",
+  keywords: [
+    "Vultamin-gold",
+    "Vultus life sciences",
+    "Omega-3",
+    "Multivitamins",
+    "Vullax",
+    "Lactulose solution",
+  ],
+  openGraph: {
+    title: "Vultamin Gold | Vultus Life Sciences",
+    description:
+      "Buy premium supplements including Omega-3, Multivitamins, and more. Trusted by thousands worldwide.",
+    url: "https://yourdomain.com", // ✅ Replace with your domain
+    siteName: "Vultus Life Sciences",
+    images: [
+      {
+        url: "https://yourdomain.com/og-image.jpg", // ✅ Replace with actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Vultamin Gold and other supplements",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Hero() {
   return (

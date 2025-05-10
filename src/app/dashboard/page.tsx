@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Eye, MoreHorizontal, Plus, Search } from "lucide-react";
+import Link from "next/link";
 
 interface InventoryItem {
   id: string;
@@ -117,10 +118,12 @@ export default function InventoryDashboard() {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
-              <Plus className="mr-2 h-4 w-4" />
-              Add Item
-            </button>
+            <Link href={"/Bill"}>
+              <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                <Plus className="mr-2 h-4 w-4" />
+                Add Item
+              </button>
+            </Link>
           </div>
 
           <div className="overflow-x-auto">
@@ -184,12 +187,6 @@ export default function InventoryDashboard() {
                               <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 <Eye className="mr-2 h-4 w-4" />
                                 View
-                              </button>
-                              <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                Edit
-                              </button>
-                              <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                Delete
                               </button>
                             </div>
                           </div>

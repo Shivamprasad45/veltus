@@ -14,6 +14,7 @@ export interface LoginForm {
 const LoginFormSchema: Schema = new Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
+  officeId: { type: String, required: true },
 });
 
 // Check if the model already exists, otherwise compile it

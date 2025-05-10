@@ -21,19 +21,17 @@ export const ORDER_API = createApi({
       }),
       invalidatesTags: ["Login"], // Invalidate cache after submission
     }),
-    // User__Order: builder.query<BookingOrderFormInput[], string>({
-    //   query: (Data) => ({
-    //     url: `/Booking?_id=${Data}`,
-    //     method: "GET",
-    //   }),
-    //   providesTags: ["Order"], // Provide tags for cache
-    // }),
+    Admin_create: builder.mutation<Message, LoginForm>({
+      query: (Data) => ({
+        url: `/admins`,
+        body: Data,
+        method: "POST",
+      }),
+      invalidatesTags: ["Login"], // Invalidate cache after submission
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const {
-  useUser_loginMutation,
-  //   useUser__OrderQuery,
-} = ORDER_API;
+export const { useUser_loginMutation, useAdmin_createMutation } = ORDER_API;

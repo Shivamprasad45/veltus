@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Vultamin Gold | Vultus Life Sciences",
+  icons: {
+    icon: "/veltus.ico", // adjust the path and name if needed
+  },
   description:
     "Explore Vultamin Gold, Omega-3, Multivitamins, Vullax, and Lactulose Solution by Vultus Life Sciences. Your trusted health companion.",
   keywords: [

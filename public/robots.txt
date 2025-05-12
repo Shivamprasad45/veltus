@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://vultuslifesciences.com/
+Host: https://vultuslifesciences.com
 
 # Sitemaps
 Sitemap: https://vultuslifesciences.com/sitemap.xml

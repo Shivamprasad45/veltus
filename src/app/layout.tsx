@@ -69,15 +69,11 @@ export default function RootLayout({
           </svg>
         </div>
 
-        <div className="relative z-10">
-          <Navbar />
-        </div>
+        <div className="relative z-10">{/* <Navbar /> */}</div>
 
         <main className="relative z-10">{children}</main>
 
-        <div className="relative z-10">
-          <Footer />
-        </div>
+        <div className="relative z-10">{/* <Footer /> */}</div>
       </body>
     </html>
   );
